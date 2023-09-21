@@ -1,0 +1,13 @@
+cabal-version:      2.4
+
+name:               project-euler
+version:            0.1.0.0
+
+author:             bytemuck
+maintainer:         bytemuck@gmail.com
+
+executable project-euler
+    hs-source-dirs:   src
+    main-is:          Main.hs
+    build-depends:    base, containers
+    other-modules:    PE.Common, PE.All, PE.P001, PE.P002, PE.P003, PE.P004, PE.P005, PE.P006, PE.P007, PE.P008, PE.P009, PE.P010, PE.P011
