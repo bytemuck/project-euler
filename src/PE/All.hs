@@ -1,4 +1,4 @@
-module PE.All (p001, p002, p003, p004, p005, p006, p007, p008, p009, p010, p011) where
+module PE.All (p001, p002, p003, p004, p005, p006, p007, p008, p009, p010, p011, p012) where
 
 import PE.P001 (p001)
 import PE.P002 (p002)
@@ -11,3 +11,4 @@ import PE.P008 (p008)
 import PE.P009 (p009)
 import PE.P010 (p010)
 import PE.P011 (p011)
+import PE.P012 (p012)

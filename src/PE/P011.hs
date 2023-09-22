@@ -29,4 +29,4 @@ stuff = [ 08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77
           01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48 ]
 
 p011 :: Integer
-p011 = maximum (map product (windowed 4 stuff) ++ map product (windowed' 4 21 stuff) ++ map product (windowed' 4 19 stuff))
+p011 = maximum (map product (windowed 4 stuff) ++ map product (windowed' 4 21 stuff) ++ map product (windowed' 4 20 stuff) ++ map product (windowed' 4 19 stuff))
