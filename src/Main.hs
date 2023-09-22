@@ -10,7 +10,7 @@ import           System.Environment    (getArgs)
 import           System.Exit           (exitSuccess)
 
 solutions :: M.Map Integer Integer
-solutions = M.fromList [(1, p001), (2, p002), (3, p003), (4, p004), (5, p005), (6, p006), (7, p007), (8, p008), (9, p009), (10, p010), (11, p011), (12, p012)]
+solutions = M.fromList [(1, p001), (2, p002), (3, p003), (4, p004), (5, p005), (6, p006), (7, p007), (8, p008), (9, p009), (10, p010), (11, p011), (12, p012), (13, p013)]
 
 solution :: Integer -> Maybe Integer
 solution number = M.lookup number solutions
