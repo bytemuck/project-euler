@@ -1,7 +1,7 @@
 module PE.P011 (p011) where
 
-import PE.Common (primes, windowed, windowed')
-import Data.List (union)
+import           Data.List (union)
+import           PE.Common (primes, windowed, windowed')
 
 gridSize :: Integer
 gridSize = 20

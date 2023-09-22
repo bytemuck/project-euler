@@ -1,7 +1,7 @@
 module PE.P012 (p012) where
 
-import PE.Common (primeFactors)
-import Data.List (group)
+import           Data.List (group)
+import           PE.Common (primeFactors)
 
 triangles :: [Integer]
 triangles = scanl1 (+) [1..]
