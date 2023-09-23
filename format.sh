@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stylish-haskell -i src/**/*.hs
+fourmolu -i src

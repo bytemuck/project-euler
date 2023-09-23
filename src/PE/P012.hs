@@ -1,10 +1,10 @@
 module PE.P012 (p012) where
 
-import           Data.List (group)
-import           PE.Common (primeFactors)
+import Data.List (group)
+import PE.Common (primeFactors)
 
 triangles :: [Integer]
-triangles = scanl1 (+) [1..]
+triangles = scanl1 (+) [1 ..]
 
 -- https://en.wikipedia.org/wiki/Highly_composite_number
 
