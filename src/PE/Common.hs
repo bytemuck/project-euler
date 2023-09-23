@@ -4,7 +4,7 @@ import Data.Char (digitToInt)
 import Data.List (tails, transpose)
 
 digits :: Integer -> [Integer]
-digits n = [toInteger (digitToInt x) | x <- show n]
+digits n = [fromIntegral (digitToInt x) | x <- show n]
 
 windowed :: Int -> [a] -> [[a]]
 windowed n xs = transpose (take n (tails xs))
