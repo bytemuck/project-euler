@@ -26,6 +26,7 @@ solutions =
         , (12, p012)
         , (13, p013)
         , (14, p014)
+        , (15, p015)
         ]
 
 solution :: Integer -> Maybe Integer

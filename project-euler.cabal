@@ -10,4 +10,4 @@ executable project-euler
     hs-source-dirs:   src
     main-is:          Main.hs
     build-depends:    base, containers, formatting, clock
-    other-modules:    PE.Common, PE.All, PE.P001, PE.P002, PE.P003, PE.P004, PE.P005, PE.P006, PE.P007, PE.P008, PE.P009, PE.P010, PE.P011, PE.P012, PE.P013, PE.P014
+    other-modules:    PE.Common, PE.All, PE.P001, PE.P002, PE.P003, PE.P004, PE.P005, PE.P006, PE.P007, PE.P008, PE.P009, PE.P010, PE.P011, PE.P012, PE.P013, PE.P014, PE.P015
