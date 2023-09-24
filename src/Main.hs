@@ -30,6 +30,7 @@ solutions =
         , (16, p016)
         , (17, p017)
         , (18, p018)
+        , (19, p019)
         ]
 
 solution :: Integer -> Maybe Integer

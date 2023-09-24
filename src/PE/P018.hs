@@ -19,12 +19,12 @@ stuff =
     , [04, 62, 98, 27, 23, 09, 70, 98, 73, 93, 38, 53, 60, 04, 23]
     ]
 
---  => 
+--  =>
 callapse :: (Integral a) => (a -> a -> a) -> [[a]] -> a
 callapse fn ns = head $ foldr1 g ns
-    where
-          g xs ys = zipWith3 f xs ys $ tail ys
-          f x y z = x + fn y z
+  where
+    g xs ys = zipWith3 f xs ys $ tail ys
+    f x y z = x + fn y z
 
 p018 :: Integer
 p018 = callapse max stuff
