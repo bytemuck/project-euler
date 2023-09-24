@@ -12,4 +12,5 @@ executable project-euler
     build-depends:    base, containers, formatting, clock, ordinal, text
     other-modules:    PE.Common, PE.All, 
                       PE.P001, PE.P002, PE.P003, PE.P004, PE.P005, PE.P006, PE.P007, PE.P008, PE.P009, PE.P010, 
-                      PE.P011, PE.P012, PE.P013, PE.P014, PE.P015, PE.P016, PE.P017, PE.P018, PE.P019
+                      PE.P011, PE.P012, PE.P013, PE.P014, PE.P015, PE.P016, PE.P017, PE.P018, PE.P019, PE.P020,
+                      PE.P021
