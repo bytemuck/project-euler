@@ -33,6 +33,7 @@ solutions =
         , (19, p019)
         , (20, p020)
         , (21, p021)
+        , (22, p022)
         ]
 
 solution :: Integer -> Maybe Integer
