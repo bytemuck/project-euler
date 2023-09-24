@@ -5,6 +5,7 @@ import Formatting (fprintLn, int, string, (%))
 import Formatting.Clock (timeSpecs)
 import Formatting.Formatters (text)
 import PE.All
+import PE.P023 (abundants, abundants')
 import System.Clock (Clock (Monotonic), getTime)
 import System.Environment (getArgs)
 import System.Exit (exitSuccess)
@@ -34,6 +35,7 @@ solutions =
         , (20, p020)
         , (21, p021)
         , (22, p022)
+        , (23, p023)
         ]
 
 solution :: Integer -> Maybe Integer

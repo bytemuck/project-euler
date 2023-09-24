@@ -1,10 +1,10 @@
-module PE.P022Stuff (p022names) where
+module PE.ProblemData.P022Data (p022Data) where
 
 import Data.List (sort)
 
 {- FOURMOLU_DISABLE -}
-p022names :: [[Char]]
-p022names =
+p022Data :: [[Char]]
+p022Data =
   sort
     [ "MARY"
     , "PATRICIA"

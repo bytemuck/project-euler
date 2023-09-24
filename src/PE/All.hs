@@ -21,6 +21,7 @@ module PE.All (
     p020,
     p021,
     p022,
+    p023,
 ) where
 
 import PE.P001 (p001)
@@ -45,3 +46,4 @@ import PE.P019 (p019)
 import PE.P020 (p020)
 import PE.P021 (p021)
 import PE.P022 (p022)
+import PE.P023 (p023)

@@ -1,7 +1,10 @@
-module PE.Common (digits, primes, primeFactors, windowed, windowed') where
+module PE.Common (digits, divisors, primes, primeFactors, windowed, windowed') where
 
 import Data.Char (digitToInt)
 import Data.List (tails, transpose)
+
+divisors :: Integer -> [Integer]
+divisors n = [x | x <- [1 .. (n - 1)], n `mod` x == 0]
 
 digits :: Integer -> [Integer]
 digits n = [fromIntegral (digitToInt x) | x <- show n]

@@ -1,9 +1,8 @@
 module PE.P021 (p021) where
 
-type AmicalPair = (Integer, Integer)
+import PE.Common (divisors)
 
-divisors :: Integer -> [Integer]
-divisors n = [x | x <- [1 .. (n - 1)], n `mod` x == 0]
+type AmicalPair = (Integer, Integer)
 
 isAmical :: AmicalPair -> Bool
 isAmical (a, b) = sum (divisors a) == b && sum (divisors b) == a
