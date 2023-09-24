@@ -1,7 +1,15 @@
-module PE.Common (digits, divisors, primes, primeFactors, windowed, windowed') where
+module PE.Common (digits, divisors, primes, primeFactors, windowed, windowed', fib, fibInfinite) where
 
 import Data.Char (digitToInt)
 import Data.List (tails, transpose)
+
+fib :: Integer -> Integer
+fib 0 = 0
+fib 1 = 1
+fib n = fib (n - 1) + fib (n - 2)
+
+fibInfinite :: [Integer]
+fibInfinite = 0 : next where next = 1 : zipWith (+) fibInfinite next
 
 divisors :: Integer -> [Integer]
 divisors n = [x | x <- [1 .. (n - 1)], n `mod` x == 0]

@@ -1,8 +1,8 @@
-module PE.P023 (p023, abundants, abundants') where
+module PE.P023 (p023) where
 
 import PE.Common (divisors)
 
-import Data.Set as S
+import Data.Set as S (Set, fromList)
 
 n :: Integer
 n = 28123
