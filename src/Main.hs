@@ -37,6 +37,8 @@ solutions =
         , (23, p023)
         , (24, p024)
         , (25, p025)
+        , (26, p026)
+        , (27, p027)
         ]
 
 solution :: Integer -> Maybe Integer
