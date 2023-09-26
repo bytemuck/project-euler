@@ -39,6 +39,7 @@ solutions =
         , (25, p025)
         , (26, p026)
         , (27, p027)
+        , (28, p028)
         ]
 
 solution :: Int -> Maybe (IO ())
