@@ -4,10 +4,11 @@ import Data.Bits (shift)
 import Data.Foldable (maximumBy)
 import Data.Function (on)
 
-collatzLen :: Integer -> Integer
+default (Int)
+collatzLen :: Int -> Int
 collatzLen = collatzLen' 1
 
-collatzLen' :: Integer -> Integer -> Integer
+collatzLen' :: Int -> Int -> Int
 collatzLen' l 1 = l
 collatzLen' l n = collatzLen' (l + 1) (collatz n)
   where
@@ -15,5 +16,5 @@ collatzLen' l n = collatzLen' (l + 1) (collatz n)
         | even n = shift n (-1)
         | otherwise = 3 * n + 1
 
-p014 :: Integer
-p014 = fst $ maximumBy (compare `on` snd) $ map (\n -> (n, collatzLen n)) [1 .. 10 ^ 6 - 1]
+p014 :: IO ()
+p014 = print . fst . maximumBy (compare `on` snd) $ map (\n -> (n, collatzLen n)) [1 .. 10 ^ 6 - 1]

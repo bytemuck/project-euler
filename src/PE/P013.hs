@@ -1,5 +1,6 @@
 module PE.P013 (p013) where
 
+default (Int)
 numbers :: [Integer]
 numbers =
     [ 37107287533902102798797998220837590246510135740250
@@ -104,5 +105,5 @@ numbers =
     , 53503534226472524250874054075591789781264330331690
     ]
 
-p013 :: Integer
-p013 = read $ take 10 (show $ sum numbers)
+p013 :: IO ()
+p013 = print (read $ take 10 (show $ sum numbers) :: Int)

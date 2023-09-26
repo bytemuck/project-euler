@@ -9,7 +9,7 @@ import System.Clock (Clock (Monotonic), getTime)
 import System.Environment (getArgs)
 import System.Exit (exitSuccess)
 
-solutions :: M.Map Integer Integer
+solutions :: M.Map Int (IO ())
 solutions =
     M.fromList
         [ (1, p001)
@@ -41,17 +41,17 @@ solutions =
         , (27, p027)
         ]
 
-solution :: Integer -> Maybe Integer
+solution :: Int -> Maybe (IO ())
 solution number = M.lookup number solutions
 
 main :: IO ()
 main = do
     args <- getArgs
     case args of
-        [number] -> case solution (read number :: Integer) of
+        [number] -> case solution $ read number of
             Just result -> do
                 start <- getTime Monotonic
-                fprintLn (string % int) "Result: " result
+                result
                 end <- getTime Monotonic
                 fprintLn (string % timeSpecs) "Time: " start end
             Nothing -> print "No solution yet."

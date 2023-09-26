@@ -1,8 +1,9 @@
 module PE.P019 (p019) where
 
-type Year = Integer
-type Month = Integer
-type Day = Integer
+default (Int)
+type Year = Int
+type Month = Int
+type Day = Int
 
 data Date = Date Year Month Day deriving (Show, Eq)
 
@@ -12,7 +13,7 @@ isLeapYear n
     | n `mod` 100 == 0 && n `mod` 400 == 0 = True
     | otherwise = False
 
-daysInMonth :: Year -> Month -> Integer
+daysInMonth :: Year -> Month -> Int
 daysInMonth y m
     | m == 2 = if isLeapYear y then 29 else 28
     | m `elem` [4, 6, 9, 11] = 30
@@ -32,5 +33,5 @@ dates d e
 day :: Date -> Day
 day (Date y m d) = d
 
-p019 :: Integer
-p019 = fromIntegral . length . filter (\(d0, d1) -> day d0 == 1 && d1 == 7) $ zip (dates (Date 1901 1 1) (Date 2000 12 31)) (cycle [2, 3, 4, 5, 6, 7, 1])
+p019 :: IO ()
+p019 = print . length . filter (\(d0, d1) -> day d0 == 1 && d1 == 7) $ zip (dates (Date 1901 1 1) (Date 2000 12 31)) (cycle [2, 3, 4, 5, 6, 7, 1])

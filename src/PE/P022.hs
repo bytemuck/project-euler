@@ -4,11 +4,12 @@ import PE.ProblemData.P022Data (p022Data)
 
 import Data.Char (ord)
 
+default (Int)
 toOrder :: [Char] -> [Int]
 toOrder = map ((\x -> x - 64) . ord)
 
-alphaScore :: [Char] -> Integer
+alphaScore :: [Char] -> Int
 alphaScore = fromIntegral . sum . toOrder
 
-p022 :: Integer
-p022 = sum $ zipWith (\i n -> alphaScore n * i) [1 ..] p022Data
+p022 :: IO ()
+p022 = print . sum $ zipWith (\i n -> alphaScore n * i) [1 ..] p022Data

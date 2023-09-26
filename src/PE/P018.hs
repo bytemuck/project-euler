@@ -1,6 +1,7 @@
 module PE.P018 (p018) where
 
-stuff :: [[Integer]]
+default (Int)
+stuff :: [[Int]]
 stuff =
     [ [75]
     , [95, 64]
@@ -26,5 +27,5 @@ callapse fn ns = head $ foldr1 g ns
     g xs ys = zipWith3 f xs ys $ tail ys
     f x y z = x + fn y z
 
-p018 :: Integer
-p018 = callapse max stuff
+p018 :: IO ()
+p018 = print $ callapse max stuff

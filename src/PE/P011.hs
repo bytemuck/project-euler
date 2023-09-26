@@ -3,11 +3,12 @@ module PE.P011 (p011) where
 import Data.List (union)
 import PE.Common (primes, windowed, windowed')
 
+default (Int)
 gridSize :: Integer
 gridSize = 20
 
 {- FOURMOLU_DISABLE -}
-stuff :: [Integer]
+stuff :: (Integral a) => [a]
 stuff =
     [ 08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08,
       49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00,
@@ -32,5 +33,5 @@ stuff =
     ]
 {- FOURMOLU_ENABLE -}
 
-p011 :: Integer
-p011 = maximum (map product (windowed 4 stuff) ++ map product (windowed' 4 21 stuff) ++ map product (windowed' 4 20 stuff) ++ map product (windowed' 4 19 stuff))
+p011 :: IO ()
+p011 = print $ maximum (map product (windowed 4 stuff) ++ map product (windowed' 4 21 stuff) ++ map product (windowed' 4 20 stuff) ++ map product (windowed' 4 19 stuff))
